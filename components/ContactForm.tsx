@@ -26,9 +26,9 @@ export default function ContactForm({ dict }: ContactFormProps) {
     e.preventDefault()
     setStatus('sending')
     try {
-      const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       })
       setStatus(res.ok ? 'sent' : 'error')
@@ -103,7 +103,7 @@ export default function ContactForm({ dict }: ContactFormProps) {
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="font-dm text-sm tracking-[0.15em] uppercase border border-gold text-gold px-8 py-4 hover:bg-gold hover:text-white transition-all duration-500 disabled:opacity-50"
+          className="font-dm text-sm tracking-[0.15em] uppercase border border-gold text-gold px-8 py-4 hover:bg-gold hover:text-[#1A3828] transition-all duration-500 disabled:opacity-50"
         >
           {status === 'sending' ? dict.sending : dict.submit}
         </button>

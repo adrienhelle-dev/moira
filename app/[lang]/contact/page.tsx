@@ -10,17 +10,21 @@ export default async function ContactPage({ params }: { params: { lang: string }
   const dict = await getDictionary(lang)
   const d = dict.contact
 
+  const directContactLabel = lang === 'fr' ? 'Contact direct' : 'Direct contact'
+  const phoneLabel = lang === 'fr' ? 'Téléphone' : 'Phone'
+
   return (
     <div className="pt-32 pb-20 md:pt-40 md:pb-32 bg-ivory">
       <div className="max-w-content mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+          {/* Left column */}
           <div>
             <p className="font-dm text-xs tracking-[0.25em] uppercase text-gold mb-6">{d.eyebrow}</p>
             <h1 className="font-cormorant font-light text-5xl md:text-6xl text-[#1A1A1A] mb-12 leading-tight">
               {d.title}
             </h1>
 
-            <div className="space-y-6 mb-12">
+            <div className="space-y-6 mb-8">
               <div>
                 <p className="font-dm text-[10px] tracking-[0.2em] uppercase text-[#6B6B6B] mb-1">
                   {d.addressLabel}
@@ -41,6 +45,32 @@ export default async function ContactPage({ params }: { params: { lang: string }
               </div>
             </div>
 
+            {/* Edouard direct contact */}
+            <div className="border-t border-[#E8E4DC] pt-6 mb-10">
+              <p className="font-dm text-[10px] tracking-[0.2em] uppercase text-[#6B6B6B] mb-4">
+                {directContactLabel}
+              </p>
+              <p className="font-cormorant text-lg font-light text-[#1A1A1A] mb-1">Edouard Dujon</p>
+              <p className="font-dm text-xs tracking-[0.1em] uppercase text-gold mb-3">
+                Partner & Agent
+              </p>
+              <div className="flex flex-col gap-1">
+                <a
+                  href="tel:+33674942857"
+                  className="font-dm text-sm text-[#6B6B6B] hover:text-gold transition-colors duration-300"
+                >
+                  +33 6 74 94 28 57
+                </a>
+                <a
+                  href="mailto:edouard@moiradvisory.com"
+                  className="font-dm text-sm text-[#6B6B6B] hover:text-gold transition-colors duration-300"
+                >
+                  edouard@moiradvisory.com
+                </a>
+              </div>
+            </div>
+
+            {/* Map */}
             <div
               className="w-full aspect-[4/3] relative overflow-hidden"
               style={{ background: 'linear-gradient(135deg, #E8E4DC 0%, #D8D4CC 100%)' }}
@@ -58,6 +88,7 @@ export default async function ContactPage({ params }: { params: { lang: string }
             </div>
           </div>
 
+          {/* Right column — form */}
           <div className="pt-0 md:pt-16">
             <ContactForm dict={d} />
           </div>
