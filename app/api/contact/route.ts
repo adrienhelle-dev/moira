@@ -5,9 +5,9 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: Request) {
   try {
-    const { name, email, subject, message } = await req.json()
+    const { name, email, phone, subject, message } = await req.json()
 
-    if (!name || !email || !message) {
+    if (!name || !email || !phone || !message) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
     }
 
@@ -24,6 +24,7 @@ export async function POST(req: Request) {
           <table style="width:100%;border-collapse:collapse;">
             <tr><td style="padding:8px 0;color:#6B6B6B;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;width:90px;">Nom</td><td style="padding:8px 0;">${name}</td></tr>
             <tr><td style="padding:8px 0;color:#6B6B6B;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;">Email</td><td style="padding:8px 0;"><a href="mailto:${email}" style="color:#A08C5B;">${email}</a></td></tr>
+            <tr><td style="padding:8px 0;color:#6B6B6B;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;">Téléphone</td><td style="padding:8px 0;"><a href="tel:${phone}" style="color:#A08C5B;">${phone}</a></td></tr>
             <tr><td style="padding:8px 0;color:#6B6B6B;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;">Sujet</td><td style="padding:8px 0;">${subject}</td></tr>
           </table>
           <div style="margin-top:24px;padding-top:24px;border-top:1px solid #E8E4DC;">

@@ -10,8 +10,10 @@ interface ContactFormProps {
 export default function ContactForm({ dict }: ContactFormProps) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const [form, setForm] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
+    phone: '',
     subject: dict.subjectOptions[0],
     message: '',
   })
@@ -29,7 +31,13 @@ export default function ContactForm({ dict }: ContactFormProps) {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          name: `${form.firstName} ${form.lastName}`,
+          email: form.email,
+          phone: form.phone,
+          subject: form.subject,
+          message: form.message,
+        }),
       })
       setStatus(res.ok ? 'sent' : 'error')
     } catch {
@@ -54,19 +62,40 @@ export default function ContactForm({ dict }: ContactFormProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <input
           type="text"
-          name="name"
-          placeholder={dict.namePlaceholder}
+          name="firstName"
+          placeholder={dict.firstNamePlaceholder}
           required
-          value={form.name}
+          value={form.firstName}
           onChange={handleChange}
           className={inputClass}
         />
+        <input
+          type="text"
+          name="lastName"
+          placeholder={dict.lastNamePlaceholder}
+          required
+          value={form.lastName}
+          onChange={handleChange}
+          className={inputClass}
+        />
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <input
           type="email"
           name="email"
           placeholder={dict.emailPlaceholder}
           required
           value={form.email}
+          onChange={handleChange}
+          className={inputClass}
+        />
+        <input
+          type="tel"
+          name="phone"
+          placeholder={dict.phonePlaceholder}
+          required
+          value={form.phone}
           onChange={handleChange}
           className={inputClass}
         />
