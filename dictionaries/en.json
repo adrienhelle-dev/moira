@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "approach": "Approach",
+    "trackRecord": "Track record",
+    "team": "Team",
+    "contact": "Contact"
+  },
+  "footer": {
+    "rights": "© 2025 Moïra Advisory — All rights reserved",
+    "legal": "Legal mentions"
+  },
+  "home": {
+    "eyebrow": "Paris · Since 2023",
+    "tagline": "Redefining how you buy, manage, and experience urban property.",
+    "subtitle": "Boutique real estate & investment advisory. Based in Paris. Built for a global clientele.",
+    "cta": "Get in touch",
+    "whatWeDoLabel": "What we do",
+    "philosophyLabel": "Our philosophy",
+    "philosophyText": "Our approach is selective, relationship-driven, and deeply rooted in lifestyle value as much as financial performance. We believe that the best real estate decisions sit at the intersection of rigorous analysis and refined taste.",
+    "figures": [
+      { "figure": "50M€+", "label": "Transaction volume advised" },
+      { "figure": "Paris & beyond", "label": "Geographic focus" },
+      { "figure": "Since 2023", "label": "Founded" }
+    ]
+  },
+  "approach": {
+    "eyebrow": "How we work",
+    "title": "Our approach",
+    "steps": [
+      {
+        "label": "01 — Deal Sourcing",
+        "text": "We access assets before they reach the open market. Through a tight network of notaires, family offices, institutional investors, and property professionals, Moïra surfaces opportunities that most buyers never see. Our pipeline is selective by design — we only pursue assets where we can add meaningful value."
+      },
+      {
+        "label": "02 — End-to-end Advisory",
+        "text": "From first analysis to final signature and beyond, we accompany clients through every stage. Acquisition structuring, negotiation, due diligence, renovation oversight, and operational management — Moïra handles the complexity so our clients can focus on the outcome."
+      },
+      {
+        "label": "03 — Design & Hospitality Lens",
+        "text": "Every asset we evaluate is assessed for both its financial performance and its potential as a living experience. We believe the two are inseparable. Properties that are beautiful, considered, and well-designed perform better — and hold value longer."
+      },
+      {
+        "label": "04 — Strategic Investment Thinking",
+        "text": "We think in portfolios and structures, not isolated transactions. Fiscal optimisation, co-investment vehicles, leverage structures, and exit strategy are part of every mandate. Our advisory is calibrated to the client's full financial picture, not just the deal in front of us."
+      }
+    ],
+    "quote": "We don't sell properties. We curate opportunities.",
+    "pillarsLabel": "Service pillars"
+  },
+  "trackRecord": {
+    "eyebrow": "Selected transactions",
+    "title": "Track record",
+    "volumeLabel": "Total transaction volume advised",
+    "columns": ["Type", "Location", "Year", "Value", "Notes"],
+    "disclaimer": "All transactions are anonymised. Deal details are indicative. Past performance does not guarantee future results."
+  },
+  "team": {
+    "eyebrow": "The people",
+    "title": "Our team",
+    "networkLabel": "Our network",
+    "networkText": "We work with a curated network of architects, notaires, designers, and operators across Paris and internationally."
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Let's talk.",
+    "addressLabel": "Address",
+    "emailLabel": "Email",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "subjectOptions": ["Advisory", "Acquisition", "Investment", "Partnership", "Other"],
+    "messagePlaceholder": "Your message",
+    "submit": "Send message",
+    "sending": "Sending...",
+    "successTitle": "Thank you.",
+    "successText": "We'll be in touch shortly.",
+    "errorText": "Something went wrong. Please try again or email us directly."
+  }
+}

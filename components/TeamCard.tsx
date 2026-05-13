@@ -1,19 +1,24 @@
+import type { Lang } from '@/lib/getDictionary'
+
 interface TeamCardProps {
   name: string
-  title: string
-  bio: string
+  titleEn: string
+  titleFr: string
+  bioEn: string
+  bioFr: string
   linkedin: string
+  lang: Lang
 }
 
-export default function TeamCard({ name, title, bio, linkedin }: TeamCardProps) {
+export default function TeamCard({ name, titleEn, titleFr, bioEn, bioFr, linkedin, lang }: TeamCardProps) {
+  const title = lang === 'fr' ? titleFr : titleEn
+  const bio = lang === 'fr' ? bioFr : bioEn
+
   return (
     <div className="flex flex-col">
-      {/* Photo placeholder */}
       <div
         className="w-full aspect-[3/4] mb-6 relative overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg, #E8E4DC 0%, #D8D4CC 100%)',
-        }}
+        style={{ background: 'linear-gradient(135deg, #E8E4DC 0%, #D8D4CC 100%)' }}
       >
         <div className="absolute inset-0 flex items-end p-6">
           <div className="w-full h-px bg-[#A08C5B]/30" />

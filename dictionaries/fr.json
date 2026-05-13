@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "approach": "Approche",
+    "trackRecord": "Références",
+    "team": "Équipe",
+    "contact": "Contact"
+  },
+  "footer": {
+    "rights": "© 2025 Moïra Advisory — Tous droits réservés",
+    "legal": "Mentions légales"
+  },
+  "home": {
+    "eyebrow": "Paris · Depuis 2023",
+    "tagline": "Redéfinir la façon d'acquérir, gérer et vivre l'immobilier urbain.",
+    "subtitle": "Conseil en immobilier et investissement. Basé à Paris. Au service d'une clientèle internationale.",
+    "cta": "Nous contacter",
+    "whatWeDoLabel": "Ce que nous faisons",
+    "philosophyLabel": "Notre philosophie",
+    "philosophyText": "Notre approche est sélective, fondée sur la relation, et profondément ancrée dans la valeur d'usage autant que dans la performance financière. Nous croyons que les meilleures décisions immobilières se situent à l'intersection de l'analyse rigoureuse et du goût affirmé.",
+    "figures": [
+      { "figure": "50M€+", "label": "Volume de transactions conseillées" },
+      { "figure": "Paris & au-delà", "label": "Périmètre géographique" },
+      { "figure": "Depuis 2023", "label": "Fondé en" }
+    ]
+  },
+  "approach": {
+    "eyebrow": "Notre méthode",
+    "title": "Notre approche",
+    "steps": [
+      {
+        "label": "01 — Sourcing",
+        "text": "Nous accédons aux actifs avant qu'ils n'arrivent sur le marché ouvert. Grâce à un réseau resserré de notaires, family offices, investisseurs institutionnels et professionnels de l'immobilier, Moïra identifie des opportunités que la plupart des acquéreurs ne voient jamais. Notre pipeline est sélectif par conception — nous ne poursuivons que les actifs sur lesquels nous pouvons apporter une valeur réelle."
+      },
+      {
+        "label": "02 — Conseil intégral",
+        "text": "De la première analyse jusqu'à la signature et au-delà, nous accompagnons nos clients à chaque étape. Structuration de l'acquisition, négociation, due diligence, suivi des travaux et gestion opérationnelle — Moïra gère la complexité pour que nos clients puissent se concentrer sur le résultat."
+      },
+      {
+        "label": "03 — Regard design & hospitalité",
+        "text": "Chaque actif que nous évaluons est analysé à la fois pour sa performance financière et pour son potentiel en tant qu'expérience de vie. Nous croyons que les deux sont indissociables. Les biens beaux, réfléchis et bien conçus performent mieux — et conservent leur valeur plus longtemps."
+      },
+      {
+        "label": "04 — Réflexion stratégique",
+        "text": "Nous pensons en portefeuilles et en structures, pas en transactions isolées. Optimisation fiscale, véhicules de co-investissement, structures de levier et stratégie de sortie font partie de chaque mandat. Notre conseil est calibré sur la situation financière globale du client, pas uniquement sur l'opération en cours."
+      }
+    ],
+    "quote": "Nous ne vendons pas des biens. Nous curons des opportunités.",
+    "pillarsLabel": "Nos piliers"
+  },
+  "trackRecord": {
+    "eyebrow": "Transactions sélectionnées",
+    "title": "Références",
+    "volumeLabel": "Volume total de transactions conseillées",
+    "columns": ["Type", "Localisation", "Année", "Valeur", "Notes"],
+    "disclaimer": "Toutes les transactions sont anonymisées. Les détails sont indicatifs. Les performances passées ne garantissent pas les résultats futurs."
+  },
+  "team": {
+    "eyebrow": "Les personnes",
+    "title": "Notre équipe",
+    "networkLabel": "Notre réseau",
+    "networkText": "Nous travaillons avec un réseau sélectionné d'architectes, notaires, designers et opérateurs à Paris et à l'international."
+  },
+  "contact": {
+    "eyebrow": "Nous contacter",
+    "title": "Parlons-en.",
+    "addressLabel": "Adresse",
+    "emailLabel": "E-mail",
+    "namePlaceholder": "Nom",
+    "emailPlaceholder": "E-mail",
+    "subjectOptions": ["Conseil", "Acquisition", "Investissement", "Partenariat", "Autre"],
+    "messagePlaceholder": "Votre message",
+    "submit": "Envoyer",
+    "sending": "Envoi en cours...",
+    "successTitle": "Merci.",
+    "successText": "Nous reviendrons vers vous rapidement.",
+    "errorText": "Une erreur s'est produite. Réessayez ou contactez-nous directement par e-mail."
+  }
+}

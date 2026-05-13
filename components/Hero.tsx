@@ -7,12 +7,14 @@ interface HeroProps {
   tagline?: string
   subtitle?: string
   cta?: { label: string; href: string }
+  eyebrow?: string
 }
 
 export default function Hero({
   tagline = 'Redefining how you buy, manage, and experience urban property.',
   subtitle = 'Boutique real estate & investment advisory. Based in Paris. Built for a global clientele.',
   cta = { label: 'Get in touch', href: '/contact' },
+  eyebrow,
 }: HeroProps) {
   const parallaxRef = useRef<HTMLDivElement>(null)
 
@@ -56,7 +58,7 @@ export default function Hero({
           className="font-dm text-xs tracking-[0.3em] uppercase text-gold mb-8 fade-in"
           style={{ animationDelay: '0.2s', opacity: 0 }}
         >
-          Paris · Since 2023
+          {eyebrow ?? 'Paris · Since 2023'}
         </p>
         <h1
           className="font-cormorant font-light text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-8 fade-in-up"

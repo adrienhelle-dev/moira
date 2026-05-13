@@ -3,13 +3,29 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { NAV_LINKS } from '@/lib/constants'
+import type { Dictionary, Lang } from '@/lib/getDictionary'
 
-export default function Navigation() {
+interface NavigationProps {
+  lang: Lang
+  dict: Dictionary
+}
+
+export default function Navigation({ lang, dict }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
-  const isHome = pathname === '/'
+
+  const isHome = pathname === `/${lang}` || pathname === `/${lang}/`
+
+  const navLinks = [
+    { label: dict.nav.approach, href: `/${lang}/approach` },
+    { label: dict.nav.trackRecord, href: `/${lang}/track-record` },
+    { label: dict.nav.team, href: `/${lang}/team` },
+    { label: dict.nav.contact, href: `/${lang}/contact` },
+  ]
+
+  const otherLang: Lang = lang === 'en' ? 'fr' : 'en'
+  const otherLangPath = pathname.replace(`/${lang}`, `/${otherLang}`)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -22,21 +38,16 @@ export default function Navigation() {
   }, [pathname])
 
   const navBg = isHome
-    ? scrolled
-      ? 'bg-ivory shadow-sm'
-      : 'bg-transparent'
+    ? scrolled ? 'bg-ivory shadow-sm' : 'bg-transparent'
     : 'bg-ivory shadow-sm'
 
   const textColor = isHome && !scrolled ? 'text-white' : 'text-[#1A1A1A]'
 
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBg}`}
-      >
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBg}`}>
         <div className="max-w-content mx-auto px-6 md:px-8 flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex flex-col leading-none select-none">
+          <Link href={`/${lang}`} className="flex flex-col leading-none select-none">
             <span
               className={`font-cormorant font-light tracking-widest2 text-xl md:text-2xl uppercase transition-colors duration-500 ${textColor}`}
             >
@@ -49,9 +60,8 @@ export default function Navigation() {
             </span>
           </Link>
 
-          {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
-            {NAV_LINKS.map((link) => (
+            {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -62,12 +72,16 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <span className={`font-dm text-xs tracking-widest opacity-50 cursor-pointer ${textColor}`}>
-              EN / FR
-            </span>
+            <Link
+              href={otherLangPath}
+              className={`font-dm text-xs tracking-widest transition-colors duration-300 hover:text-gold ${
+                isHome && !scrolled ? 'text-white/60' : 'text-[#6B6B6B]'
+              }`}
+            >
+              {otherLang.toUpperCase()}
+            </Link>
           </div>
 
-          {/* Mobile hamburger */}
           <button
             className={`md:hidden flex flex-col gap-1.5 p-2 ${textColor}`}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -86,14 +100,13 @@ export default function Navigation() {
         </div>
       </nav>
 
-      {/* Mobile overlay */}
       <div
         className={`fixed inset-0 z-40 bg-ivory flex flex-col items-center justify-center transition-all duration-500 ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
         <nav className="flex flex-col items-center gap-8">
-          {NAV_LINKS.map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -102,7 +115,12 @@ export default function Navigation() {
               {link.label}
             </Link>
           ))}
-          <span className="font-dm text-xs tracking-widest text-[#6B6B6B] mt-4 cursor-pointer">EN / FR</span>
+          <Link
+            href={otherLangPath}
+            className="font-dm text-xs tracking-widest text-[#6B6B6B] hover:text-gold transition-colors duration-300 mt-4"
+          >
+            {otherLang.toUpperCase()}
+          </Link>
         </nav>
       </div>
     </>

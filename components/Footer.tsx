@@ -1,6 +1,12 @@
 import Link from 'next/link'
+import type { Dictionary, Lang } from '@/lib/getDictionary'
 
-export default function Footer() {
+interface FooterProps {
+  lang: Lang
+  dict: Dictionary
+}
+
+export default function Footer({ lang, dict }: FooterProps) {
   return (
     <footer className="bg-ivory border-t border-[#E8E4DC] py-12 md:py-16">
       <div className="max-w-content mx-auto px-6 md:px-8">
@@ -24,12 +30,12 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col items-start md:items-end gap-2">
-            <p className="font-dm text-xs text-[#6B6B6B]">© 2025 Moïra Advisory — All rights reserved</p>
+            <p className="font-dm text-xs text-[#6B6B6B]">{dict.footer.rights}</p>
             <Link
-              href="/legal"
+              href={`/${lang}/legal`}
               className="font-dm text-xs text-[#6B6B6B] hover:text-gold transition-colors duration-300"
             >
-              Legal mentions
+              {dict.footer.legal}
             </Link>
           </div>
         </div>

@@ -1,13 +1,18 @@
 'use client'
 
 import { useState } from 'react'
+import type { Dictionary } from '@/lib/getDictionary'
 
-export default function ContactForm() {
+interface ContactFormProps {
+  dict: Dictionary['contact']
+}
+
+export default function ContactForm({ dict }: ContactFormProps) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const [form, setForm] = useState({
     name: '',
     email: '',
-    subject: 'Advisory',
+    subject: dict.subjectOptions[0],
     message: '',
   })
 
@@ -38,8 +43,8 @@ export default function ContactForm() {
   if (status === 'sent') {
     return (
       <div className="py-12 text-center">
-        <p className="font-cormorant text-2xl font-light text-[#1A1A1A] mb-2">Thank you.</p>
-        <p className="font-dm text-sm text-[#6B6B6B]">We&apos;ll be in touch shortly.</p>
+        <p className="font-cormorant text-2xl font-light text-[#1A1A1A] mb-2">{dict.successTitle}</p>
+        <p className="font-dm text-sm text-[#6B6B6B]">{dict.successText}</p>
       </div>
     )
   }
@@ -47,61 +52,51 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            required
-            value={form.name}
-            onChange={handleChange}
-            className={inputClass}
-          />
-        </div>
-        <div>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-            value={form.email}
-            onChange={handleChange}
-            className={inputClass}
-          />
-        </div>
-      </div>
-
-      <div>
-        <select
-          name="subject"
-          value={form.subject}
-          onChange={handleChange}
-          className={`${inputClass} cursor-pointer`}
-        >
-          <option value="Advisory">Advisory</option>
-          <option value="Acquisition">Acquisition</option>
-          <option value="Investment">Investment</option>
-          <option value="Partnership">Partnership</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-
-      <div>
-        <textarea
-          name="message"
-          placeholder="Your message"
+        <input
+          type="text"
+          name="name"
+          placeholder={dict.namePlaceholder}
           required
-          rows={5}
-          value={form.message}
+          value={form.name}
           onChange={handleChange}
-          className={`${inputClass} resize-none`}
+          className={inputClass}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder={dict.emailPlaceholder}
+          required
+          value={form.email}
+          onChange={handleChange}
+          className={inputClass}
         />
       </div>
 
+      <select
+        name="subject"
+        value={form.subject}
+        onChange={handleChange}
+        className={`${inputClass} cursor-pointer`}
+      >
+        {dict.subjectOptions.map((opt) => (
+          <option key={opt} value={opt}>
+            {opt}
+          </option>
+        ))}
+      </select>
+
+      <textarea
+        name="message"
+        placeholder={dict.messagePlaceholder}
+        required
+        rows={5}
+        value={form.message}
+        onChange={handleChange}
+        className={`${inputClass} resize-none`}
+      />
+
       {status === 'error' && (
-        <p className="font-dm text-sm text-red-500">
-          Something went wrong. Please try again or email us directly.
-        </p>
+        <p className="font-dm text-sm text-red-500">{dict.errorText}</p>
       )}
 
       <div>
@@ -110,7 +105,7 @@ export default function ContactForm() {
           disabled={status === 'sending'}
           className="font-dm text-sm tracking-[0.15em] uppercase border border-gold text-gold px-8 py-4 hover:bg-gold hover:text-white transition-all duration-500 disabled:opacity-50"
         >
-          {status === 'sending' ? 'Sending...' : 'Send message'}
+          {status === 'sending' ? dict.sending : dict.submit}
         </button>
       </div>
     </form>
