@@ -26,10 +26,10 @@ export default function ContactForm({ dict }: ContactFormProps) {
     e.preventDefault()
     setStatus('sending')
     try {
-      const res = await fetch('https://formspree.io/f/xldednqb', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ ...form, _replyto: form.email }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
       })
       setStatus(res.ok ? 'sent' : 'error')
     } catch {
