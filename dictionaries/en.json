@@ -16,10 +16,10 @@
     "cta": "Get in touch",
     "whatWeDoLabel": "What we do",
     "services": [
-      { "title": "Acquisition", "description": "Sourcing and structuring the right asset for your goals." },
-      { "title": "Transformation", "description": "Design-led renovation that elevates value and experience." },
-      { "title": "Management", "description": "Operational excellence from day one through the long term." },
-      { "title": "Advisory", "description": "Strategic investment thinking across your real estate portfolio." }
+      { "title": "Acquisition", "description": "Buying, selling, off-market search. From studio to full building, we find and negotiate what our clients can't find on their own." },
+      { "title": "Transformation", "description": "End-to-end renovation management: architect, contractors, interior design. We coordinate everything to maximise each asset's value." },
+      { "title": "Management", "description": "Full property management for apartments and buildings — tenants, maintenance, accounting. We handle it all on your behalf." },
+      { "title": "Advisory", "description": "Financing, legal structuring, introductions to notaries and banks. We optimise every transaction around your situation." }
     ],
     "philosophyLabel": "Our philosophy",
     "philosophyText": "Our approach is selective, relationship-driven, and deeply rooted in lifestyle value as much as financial performance. We believe that the best real estate decisions sit at the intersection of rigorous analysis and refined taste.",

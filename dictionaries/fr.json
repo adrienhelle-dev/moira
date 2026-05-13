@@ -16,10 +16,10 @@
     "cta": "Nous contacter",
     "whatWeDoLabel": "Ce que nous faisons",
     "services": [
-      { "title": "Acquisition", "description": "Sourcing et structuration de l'actif adapté à vos objectifs." },
-      { "title": "Transformation", "description": "Rénovation pilotée par le design pour valoriser l'expérience et le patrimoine." },
-      { "title": "Gestion", "description": "Excellence opérationnelle dès le premier jour et sur la durée." },
-      { "title": "Conseil", "description": "Réflexion stratégique sur l'ensemble de votre portefeuille immobilier." }
+      { "title": "Acquisition", "description": "Achat, vente, chasse off-market. Du studio à l'immeuble entier, nous trouvons et négocions les biens que nos clients ne trouvent pas seuls." },
+      { "title": "Transformation", "description": "Rénovation pilotée de A à Z : architecte, entreprises de travaux, décoration. Nous coordonnons tout pour valoriser chaque actif." },
+      { "title": "Gestion", "description": "Gestion locative complète pour appartements et immeubles — locataires, travaux, comptabilité. Nous gérons à votre place." },
+      { "title": "Conseil", "description": "Financement, structuration juridique, mise en relation avec notaires et banques. Nous optimisons chaque opération selon votre situation." }
     ],
     "philosophyLabel": "Notre philosophie",
     "philosophyText": "Notre approche est sélective, fondée sur la relation, et profondément ancrée dans la valeur d'usage autant que dans la performance financière. Nous croyons que les meilleures décisions immobilières se situent à l'intersection de l'analyse rigoureuse et du goût affirmé.",
