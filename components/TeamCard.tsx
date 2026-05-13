@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Lang } from '@/lib/getDictionary'
 
 interface TeamCardProps {
@@ -7,22 +8,35 @@ interface TeamCardProps {
   bioEn: string
   bioFr: string
   linkedin: string
+  photo?: string
   lang: Lang
 }
 
-export default function TeamCard({ name, titleEn, titleFr, bioEn, bioFr, linkedin, lang }: TeamCardProps) {
+export default function TeamCard({ name, titleEn, titleFr, bioEn, bioFr, linkedin, photo, lang }: TeamCardProps) {
   const title = lang === 'fr' ? titleFr : titleEn
   const bio = lang === 'fr' ? bioFr : bioEn
 
   return (
     <div className="flex flex-col">
-      <div
-        className="w-full aspect-[3/4] mb-6 relative overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #E8E4DC 0%, #D8D4CC 100%)' }}
-      >
-        <div className="absolute inset-0 flex items-end p-6">
-          <div className="w-full h-px bg-[#A08C5B]/30" />
-        </div>
+      <div className="w-full aspect-square mb-6 relative overflow-hidden bg-[#1A3828]/10">
+        {photo ? (
+          <Image
+            src={photo}
+            alt={name}
+            fill
+            className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+            sizes="(max-width: 768px) 100vw, 480px"
+          />
+        ) : (
+          <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(160deg, #1A3828 0%, #2C4A38 60%, #1A3828 100%)' }}
+          >
+            <div className="absolute inset-0 flex items-end p-6">
+              <div className="w-full h-px bg-[#A08C5B]/40" />
+            </div>
+          </div>
+        )}
       </div>
 
       <h3 className="font-cormorant text-2xl md:text-3xl font-light text-[#1A1A1A] mb-1">{name}</h3>

@@ -13,7 +13,7 @@ const config: Config = {
         'text-primary': '#1A1A1A',
         'text-secondary': '#6B6B6B',
         gold: '#A08C5B',
-        forest: '#2C3E2D',
+        forest: '#1A3828',
       },
       fontFamily: {
         cormorant: ['var(--font-cormorant)', 'serif'],

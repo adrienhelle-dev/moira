@@ -36,21 +36,21 @@ export default function Hero({
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(135deg, #1a1a18 0%, #2c2c28 40%, #1e2820 100%)',
+            background: 'linear-gradient(160deg, #0F2318 0%, #1A3828 45%, #132D20 100%)',
           }}
         />
-        {/* Subtle texture overlay */}
+        {/* Organic texture overlay */}
         <div
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0"
           style={{
             backgroundImage:
-              'radial-gradient(ellipse at 30% 50%, #A08C5B22 0%, transparent 60%), radial-gradient(ellipse at 70% 20%, #2C3E2D33 0%, transparent 50%)',
+              'radial-gradient(ellipse at 20% 60%, rgba(160,140,91,0.12) 0%, transparent 55%), radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 45%), radial-gradient(ellipse at 60% 80%, rgba(26,56,40,0.6) 0%, transparent 50%)',
           }}
         />
       </div>
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      {/* Depth overlay */}
+      <div className="absolute inset-0 bg-[#0F2318]/40" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 md:px-8 max-w-content mx-auto">
@@ -75,7 +75,7 @@ export default function Hero({
         <div className="fade-in" style={{ animationDelay: '1s', opacity: 0 }}>
           <Link
             href={cta.href}
-            className="inline-block font-dm text-sm tracking-[0.15em] uppercase border border-gold text-gold px-8 py-4 hover:bg-gold hover:text-white transition-all duration-500"
+            className="inline-block font-dm text-sm tracking-[0.15em] uppercase border border-gold text-gold px-8 py-4 hover:bg-gold hover:text-[#1A3828] transition-all duration-500"
           >
             {cta.label}
           </Link>

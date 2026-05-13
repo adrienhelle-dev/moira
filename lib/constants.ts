@@ -46,28 +46,13 @@ export const DEALS = [
 
 export const TEAM = [
   {
-    name: 'Adrien Helle',
-    titleEn: 'Partner & Managing Director',
-    titleFr: 'Associé & Directeur Général',
-    bioEn: 'Background in real estate transactions, corporate finance, and hospitality strategy. Adrien co-founded Moïra with the conviction that real estate advisory should combine financial rigour with an acute sense of place and living experience.',
-    bioFr: "Parcours en transactions immobilières, finance d'entreprise et stratégie hôtelière. Adrien a co-fondé Moïra avec la conviction que le conseil immobilier doit allier rigueur financière et sens aigu du lieu et de l'expérience de vie.",
-    linkedin: 'https://www.linkedin.com/in/adrienhelle/',
-  },
-  {
-    name: 'Alexandre Kiman',
-    titleEn: 'Partner',
-    titleFr: 'Associé',
-    bioEn: "Background in real estate operations and asset management. Alexandre oversees deal execution, transformation projects, and operational performance across Moïra's portfolio.",
-    bioFr: "Parcours en opérations immobilières et gestion d'actifs. Alexandre supervise l'exécution des opérations, les projets de transformation et la performance opérationnelle du portefeuille de Moïra.",
-    linkedin: 'https://www.linkedin.com/in/alexandre-kiman/',
-  },
-  {
     name: 'Edouard Dujon',
-    titleEn: "Partner & Agency Director",
-    titleFr: "Associé & Directeur d'Agence",
+    titleEn: 'Partner & Agent',
+    titleFr: 'Associé & Agent',
     bioEn: "Seasoned real estate professional with deep expertise in Parisian market dynamics, client development, and agency operations. Edouard leads Moïra's client-facing activities and business development.",
     bioFr: "Professionnel de l'immobilier aguerri, avec une expertise approfondie des dynamiques du marché parisien, du développement client et des opérations d'agence. Edouard pilote les activités client et le développement commercial de Moïra.",
     linkedin: 'https://www.linkedin.com/in/edouard-dujon-5a2a0abb/',
+    photo: '/team/edouard.jpg',
   },
   {
     name: 'Nathalie Magendie',
@@ -76,6 +61,25 @@ export const TEAM = [
     bioEn: 'Specialised in residential transactions across central Paris arrondissements. Nathalie brings sharp local knowledge and a meticulous approach to every client relationship.',
     bioFr: 'Spécialisée dans les transactions résidentielles dans les arrondissements centraux de Paris. Nathalie apporte une connaissance locale précise et une approche méticuleuse à chaque relation client.',
     linkedin: 'https://www.linkedin.com/in/nathalie-magendie-7952a61a/',
+    photo: '/team/nathalie.jpg',
+  },
+  {
+    name: 'Adrien Helle',
+    titleEn: 'Partner',
+    titleFr: 'Associé',
+    bioEn: 'Background in real estate transactions, corporate finance, and hospitality strategy. Adrien co-founded Moïra with the conviction that real estate advisory should combine financial rigour with an acute sense of place and living experience.',
+    bioFr: "Parcours en transactions immobilières, finance d'entreprise et stratégie hôtelière. Adrien a co-fondé Moïra avec la conviction que le conseil immobilier doit allier rigueur financière et sens aigu du lieu et de l'expérience de vie.",
+    linkedin: 'https://www.linkedin.com/in/adrienhelle/',
+    photo: '/team/adrien.jpg',
+  },
+  {
+    name: 'Alexandre Kiman',
+    titleEn: 'Partner',
+    titleFr: 'Associé',
+    bioEn: "Background in real estate operations and asset management. Alexandre oversees deal execution, transformation projects, and operational performance across Moïra's portfolio.",
+    bioFr: "Parcours en opérations immobilières et gestion d'actifs. Alexandre supervise l'exécution des opérations, les projets de transformation et la performance opérationnelle du portefeuille de Moïra.",
+    linkedin: 'https://www.linkedin.com/in/alexandre-kiman/',
+    photo: '/team/alexandre.jpg',
   },
 ]
 
