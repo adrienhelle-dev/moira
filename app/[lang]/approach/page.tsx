@@ -8,7 +8,7 @@ export async function generateStaticParams() {
 
 export default async function ApproachPage({ params }: { params: { lang: string } }) {
   const lang = params.lang as Lang
-  const dict = await getDictionary(lang)
+  const dict = getDictionary(lang)
   const d = dict.approach
 
   return (

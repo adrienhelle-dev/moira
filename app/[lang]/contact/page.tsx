@@ -7,7 +7,7 @@ export async function generateStaticParams() {
 
 export default async function ContactPage({ params }: { params: { lang: string } }) {
   const lang = params.lang as Lang
-  const dict = await getDictionary(lang)
+  const dict = getDictionary(lang)
   const d = dict.contact
 
   const directContactLabel = lang === 'fr' ? 'Contact direct' : 'Direct contact'

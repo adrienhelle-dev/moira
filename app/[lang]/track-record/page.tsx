@@ -9,7 +9,7 @@ export async function generateStaticParams() {
 
 export default async function TrackRecordPage({ params }: { params: { lang: string } }) {
   const lang = params.lang as Lang
-  const dict = await getDictionary(lang)
+  const dict = getDictionary(lang)
   const d = dict.trackRecord
 
   return (

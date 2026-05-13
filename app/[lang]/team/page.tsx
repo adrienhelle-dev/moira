@@ -9,7 +9,7 @@ export async function generateStaticParams() {
 
 export default async function TeamPage({ params }: { params: { lang: string } }) {
   const lang = params.lang as Lang
-  const dict = await getDictionary(lang)
+  const dict = getDictionary(lang)
   const d = dict.team
 
   return (

@@ -14,7 +14,7 @@ export default async function LangLayout({
   params: { lang: string }
 }) {
   const lang = params.lang as Lang
-  const dict = await getDictionary(lang)
+  const dict = getDictionary(lang)
 
   return (
     <>
