@@ -15,6 +15,12 @@
     "subtitle": "Agence immobilière de prestige & conseil en investissement. Basé à Paris. Au service d'une clientèle internationale.",
     "cta": "Nous contacter",
     "whatWeDoLabel": "Ce que nous faisons",
+    "services": [
+      { "title": "Acquisition", "description": "Sourcing et structuration de l'actif adapté à vos objectifs." },
+      { "title": "Transformation", "description": "Rénovation pilotée par le design pour valoriser l'expérience et le patrimoine." },
+      { "title": "Gestion", "description": "Excellence opérationnelle dès le premier jour et sur la durée." },
+      { "title": "Conseil", "description": "Réflexion stratégique sur l'ensemble de votre portefeuille immobilier." }
+    ],
     "philosophyLabel": "Notre philosophie",
     "philosophyText": "Notre approche est sélective, fondée sur la relation, et profondément ancrée dans la valeur d'usage autant que dans la performance financière. Nous croyons que les meilleures décisions immobilières se situent à l'intersection de l'analyse rigoureuse et du goût affirmé.",
     "figures": [

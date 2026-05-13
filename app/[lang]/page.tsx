@@ -1,6 +1,5 @@
 import Hero from '@/components/Hero'
 import ServiceCard from '@/components/ServiceCard'
-import { SERVICES } from '@/lib/constants'
 import { getDictionary, langs, type Lang } from '@/lib/getDictionary'
 
 export async function generateStaticParams() {
@@ -25,7 +24,7 @@ export default async function HomePage({ params }: { params: { lang: string } })
         <div className="max-w-content mx-auto px-6 md:px-8">
           <p className="font-dm text-xs tracking-[0.25em] uppercase text-gold mb-12">{d.whatWeDoLabel}</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            {SERVICES.map((service, i) => (
+            {d.services.map((service, i) => (
               <ServiceCard key={service.title} {...service} index={i} />
             ))}
           </div>

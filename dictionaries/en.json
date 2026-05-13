@@ -15,6 +15,12 @@
     "subtitle": "Boutique real estate agency & investment advisory. Based in Paris. Built for a global clientele.",
     "cta": "Get in touch",
     "whatWeDoLabel": "What we do",
+    "services": [
+      { "title": "Acquisition", "description": "Sourcing and structuring the right asset for your goals." },
+      { "title": "Transformation", "description": "Design-led renovation that elevates value and experience." },
+      { "title": "Management", "description": "Operational excellence from day one through the long term." },
+      { "title": "Advisory", "description": "Strategic investment thinking across your real estate portfolio." }
+    ],
     "philosophyLabel": "Our philosophy",
     "philosophyText": "Our approach is selective, relationship-driven, and deeply rooted in lifestyle value as much as financial performance. We believe that the best real estate decisions sit at the intersection of rigorous analysis and refined taste.",
     "figures": [
