@@ -67,7 +67,7 @@
     "emailLabel": "Email",
     "namePlaceholder": "Name",
     "emailPlaceholder": "Email",
-    "subjectOptions": ["Advisory", "Acquisition", "Investment", "Partnership", "Other"],
+    "subjectOptions": ["Estimation", "Advisory", "Acquisition", "Investment", "Partnership", "Other"],
     "messagePlaceholder": "Your message",
     "submit": "Send message",
     "sending": "Sending...",

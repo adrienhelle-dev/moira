@@ -32,17 +32,6 @@ export default async function ContactPage({ params }: { params: { lang: string }
                 <p className="font-dm text-sm text-[#1A1A1A]">229 rue Saint-Honoré</p>
                 <p className="font-dm text-sm text-[#1A1A1A]">75001 Paris, France</p>
               </div>
-              <div>
-                <p className="font-dm text-[10px] tracking-[0.2em] uppercase text-[#6B6B6B] mb-1">
-                  {d.emailLabel}
-                </p>
-                <a
-                  href="mailto:contact@moira-advisory.com"
-                  className="font-dm text-sm text-[#1A1A1A] hover:text-gold transition-colors duration-300"
-                >
-                  contact@moira-advisory.com
-                </a>
-              </div>
             </div>
 
             {/* Edouard direct contact */}
